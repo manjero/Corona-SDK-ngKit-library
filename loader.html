@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no;"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<style type="text/css">
+			body.loadingCommunity * {
+				-webkit-tap-highlight-color: rgba(0,0,0,0);
+			}
+			body.loadingCommunity {
+				margin: 0px;
+				padding: 0px;
+				background-color: #98989c;
+			    font-family: Helvetica;
+			    -webkit-user-select: none;
+			    -webkit-text-size-adjust: none;
+			}
+			body.loadingCommunity .infoText {
+				margin-bottom: 10px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #3a3a3a;
+				text-shadow: #c2c2c2 0px -1px 0px;
+				text-align: center;
+			}
+			body.loadingCommunity #progressBar {
+				margin: 0px auto 10px;
+				width: 150px;
+				height: 10px;
+				-webkit-border-radius: 5px;
+				background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.1, #0e3e8b), color-stop(0.1, #2d64be), color-stop(0.9, #5f9df1), color-stop(0.9, #457fcb)), -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.1, #969696), color-stop(0.1, #c4c4c4), color-stop(0.5, #f1f1f1), color-stop(0.5, #f8f8f8), color-stop(0.9, #f8f8f8), color-stop(0.9, #cdcdcd));
+				background-repeat: no-repeat;
+				background-size: 0% 100%, 100% 100%;
+				background-position: left, right;
+			}
+			body.loadingCommunity .content .button {
+				display: inline-block;
+				margin: 0px 10px;
+				padding: 0px 8px 0px 9px;
+				border: 1px solid rgb(38, 42, 46);
+				height: 33px;
+				line-height: 33px;
+				background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(161, 174, 195)), color-stop(0.5, rgb(106, 128, 162)), color-stop(0.5, rgb(89, 114, 152)), to(rgb(89, 114, 152)));
+				-webkit-box-shadow: inset 0px 1px 2px -1px #000000, 0px 1px 2px -1px #FFFFFF;
+				-webkit-border-radius: 5px;
+				font-size: 16px;
+				font-weight: bold;
+				color: #ffffff;
+				text-align: center;
+				text-shadow: #000000 0px -1px 1px;
+				text-decoration: none;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			body.loadingCommunity .content {
+				margin-top: 100px;
+				text-align: center;
+			}
+			body.loadingCommunity .content #loader .loadingIndicator {
+				position: relative;
+				margin: 0px auto 10px;
+				width: 40px;
+				height: 40px;
+			}
+			body.loadingCommunity .content #loader .loadingIndicator .bar {
+				position: absolute;
+				top: 0px;
+				left: 45%;
+				width: 10%;
+				height: 25%;
+				background-color: #4c4c4e;
+				-webkit-border-radius: 2px;
+				-webkit-transform-origin: 50% 200%;
+				-webkit-animation-name: loadingIndicatorAnimation;
+				-webkit-animation-duration: 1s;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-timing-function: linear;
+			}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_1 {-webkit-transform:rotate(0deg);-webkit-animation-delay:0s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_2 {-webkit-transform:rotate(30deg);-webkit-animation-delay:-0.9167s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_3 {-webkit-transform:rotate(60deg);-webkit-animation-delay:-0.8333s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_4 {-webkit-transform:rotate(90deg);-webkit-animation-delay:-0.75s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_5 {-webkit-transform:rotate(120deg);-webkit-animation-delay:-0.6667s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_6 {-webkit-transform:rotate(150deg);-webkit-animation-delay:-0.5833s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_7 {-webkit-transform:rotate(180deg);-webkit-animation-delay:-0.5s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_8 {-webkit-transform:rotate(210deg);-webkit-animation-delay:-0.4167s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_9 {-webkit-transform:rotate(240deg);-webkit-animation-delay:-0.3333s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_10 {-webkit-transform:rotate(270deg);-webkit-animation-delay:-0.25s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_11 {-webkit-transform:rotate(300deg);-webkit-animation-delay:-0.1667s;}
+			body.loadingCommunity .content #loader .loadingIndicator .bar.bar_12 {-webkit-transform:rotate(330deg);-webkit-animation-delay:-0.0833s;}
+			@-webkit-keyframes loadingIndicatorAnimation {
+				0% {
+					opacity: 1;
+				}
+				100% {
+					opacity: 0.25;
+				}
+			}
+		</style>
+	</head>
+	<body class="loadingCommunity">
+		<div class="content">
+			<div id="loader">
+				<div class="loadingIndicator">
+					<span class="bar bar_1"></span><span class="bar bar_2"></span><span class="bar bar_3"></span><span class="bar bar_4"></span><span class="bar bar_5"></span><span class="bar bar_6"></span>
+					<span class="bar bar_7"></span><span class="bar bar_8"></span><span class="bar bar_9"></span><span class="bar bar_10"></span><span class="bar bar_11"></span><span class="bar bar_12"></span>
+				</div>
+				<div id="progressBar"></div>
+				<div class="infoText">Loading...</div>
+				<a class="button" href="COMMUNITY_EXIT">Close</a>
+			</div>
+			<div id="error" style="display:none">
+				<div class="infoText">Internet connection required</div>
+				<a href="#" class="button" onclick="javascript:return tryAgain();">Try Again</a>
+				<a class="button" href="COMMUNITY_EXIT">Close</a>
+			</div>
+		</div>
+		<script>
+			
+			var numOfTotalRequests = 2,
+				numOfCompletedRequests = 0,
+				loaderJsStr = null,
+				loaderData = null,
+				loaderDataPercent, loaderJsPercent;
+				progressBarElm = document.getElementById("progressBar");
+			
+			function checkRequestsCompletion() {
+				var script, head;
+				if (numOfTotalRequests === numOfCompletedRequests) {
+					script = document.createElement("script");
+					script.type = "text/javascript";
+					script.textContent = loaderJsStr;
+					head = document.getElementsByTagName("head")[0];
+					head.appendChild(script);
+					initApp(JSON.parse(loaderData));
+				}
+			}
+			
+			function updateProgressBar() {
+				var percent = Math.round(loaderDataPercent * 0.1 + loaderJsPercent * 0.9);
+				progressBarElm.style.backgroundSize = percent + "% 100%, " + (100 - percent) + "% 100%";
+			}
+			
+			function sendRequests() {
+				var loaderRequest, dataRequest;
+				var loaderContentLength = 0;
+				
+				loaderDataPercent = 0, loaderJsPercent = 0;
+				
+				if (!loaderJsStr) {
+					loaderRequest = new XMLHttpRequest();
+					loaderRequest.addEventListener("progress", function(event) {
+						if (!loaderContentLength) {
+							var matches = loaderRequest.responseText.match(/\/\*contentLength=([\w-]+)\*\//);
+							loaderContentLength = (matches && matches.length >= 2) ? parseInt(matches[1]) : 0;
+						}
+						if (event.loaded && loaderContentLength) {
+							loaderJsPercent = event.loaded / loaderContentLength * 100;
+							updateProgressBar();
+						}
+					}, false);
+					loaderRequest.open("GET", "%staticRoot%community/apiVer-%apiVer%/getLoaderJS", true);
+					loaderRequest.onreadystatechange = function(event) {
+						if (loaderRequest.readyState === 4) {
+							if (loaderRequest.status === 200) {
+								loaderJsStr = loaderRequest.responseText;
+								loaderJsPercent = 100;
+								updateProgressBar();
+								numOfCompletedRequests++;
+								setTimeout(checkRequestsCompletion, 20);								
+							} else {
+								hostOnLoadFail();
+							}
+						}
+					};
+					loaderRequest.send(null);
+				}
+				
+				if (!loaderData) {
+					dataRequest = new XMLHttpRequest();
+					dataRequest.open("GET", "%root%community?action=getDataJS&commId=%comm_id%&did=%did%&sig=%sig%&internalUrl=%internalUrl%&hideCloseBtn=%hideCloseBtn%&apiVer=%apiVer%", true);
+					dataRequest.onreadystatechange = function (event) {
+						if (dataRequest.readyState === 4) {
+							if (dataRequest.status === 200) {
+								loaderData = dataRequest.responseText;
+								loaderDataPercent = 100;
+								updateProgressBar();
+								numOfCompletedRequests++;
+								checkRequestsCompletion();
+							} else {
+								hostOnLoadFail();
+							}
+						}
+					};
+					dataRequest.send(null);
+				}
+			}
+			
+			function toggle(e) {
+				var elm = document.getElementById(e);
+				elm ? (elm.style.display = (elm.style.display == 'none') ? 'block' : 'none') : 0;
+			}
+			
+			function hostOnLoadFail() {
+				toggle('loader');
+				toggle('error');
+			}
+			
+			function tryAgain() {
+				toggle('loader');
+				toggle('error');
+				sendRequests();
+				return false;
+			}
+			
+			function getDeviceInfo() {
+				return %deviceInfoJson%;
+			}
+
+			sendRequests();
+			
+		</script>
+	</body>
+</html>
