@@ -1,0 +1,27 @@
+While developing our latest app <a href="http://www.ikululu.com/" target="_blank">iKululu 2.0</a>, we've been approached by the great guys at ngKit.com.
+They have built a great new product - a community module for app developers.
+
+If you ever wanted to communicate and engage your customer in a better, more convenient fashion - this is the way to go.
+
+To add the community module you will need to update the ID & secret key in the module file.
+Include the module and all you have to do is to use the open function to enable the F.A.Q, Forum, Latest News, Feedback and a share button. 
+
+The ngKit module does all the work for you - 
+* if the webview doesn't open (connection problems etc) it will offer a close button.
+* support for landscape and portrait mode automatically.
+* adds a close button for the webview
+
+All the services are web based, using a fullscreen webview. This allows for great flexibility and contro over the community module without the need to update your app!  you can always log in to the service and update the module.
+All the user feedbacks and forum messages are available on one place and you can also be notified by email.
+<b>
+<div style="text-align: center;" align="center"> <img src="http://www.ikululu.com/images/ngkit.png" /></div> <b>
+
+The service is in private beta at the moment but if you would like to join the beta, send an email to <a href="mailto:beta@ngkit.com">beta@ngkit.com</a> and ask to join.
+
+You can checkout the sample project on github. it uses my own ngkit account and has a sample community module running for you to try.
+Don't forget to compile for device/simulator to see it in effect.
+https://github.com/manjero/Corona-SDK-ngKit-library
+
+This is the first piece of code that I contribute and that I feel confident enough to release to the public. Of course, All comments regarding the service or the library are more than welcomed and if someone can contribute a better module, I'll be happy to learn what I need to improve.
+
+ 
